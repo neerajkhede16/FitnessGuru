@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17773D9B21677B10005AE9D9 /* FitnessDetail.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17773D9A21677B10005AE9D9 /* FitnessDetail.xml */; };
+		17773D9D21677B47005AE9D9 /* Index.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17773D9C21677B47005AE9D9 /* Index.xml */; };
+		177BFC74216B2D2600B230FC /* images in Resources */ = {isa = PBXBuildFile; fileRef = 177BFC73216B2D2600B230FC /* images */; };
+		17D174DE21672B7000DF0CA5 /* application.js in Resources */ = {isa = PBXBuildFile; fileRef = 17D174DD21672B7000DF0CA5 /* application.js */; };
+		17D174E12167315600DF0CA5 /* Index.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17D174E02167315600DF0CA5 /* Index.xml */; };
+		17D174E32167317400DF0CA5 /* CategoryList.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17D174E22167317400DF0CA5 /* CategoryList.xml */; };
+		17D174E52167330C00DF0CA5 /* Index.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17D174E42167330C00DF0CA5 /* Index.xml */; };
+		17D174E7216735C700DF0CA5 /* Category.js in Resources */ = {isa = PBXBuildFile; fileRef = 17D174E6216735C700DF0CA5 /* Category.js */; };
+		17D174E9216740DF00DF0CA5 /* DocumentController.js in Resources */ = {isa = PBXBuildFile; fileRef = 17D174E8216740DF00DF0CA5 /* DocumentController.js */; };
+		17D174EB2167414100DF0CA5 /* DocumentLoader.js in Resources */ = {isa = PBXBuildFile; fileRef = 17D174EA2167414000DF0CA5 /* DocumentLoader.js */; };
 		C963CDEC2166136E0075B0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C963CDEB2166136E0075B0CF /* AppDelegate.swift */; };
 		C963CDEF216613720075B0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C963CDEE216613720075B0CF /* Assets.xcassets */; };
 		C963CDFA216613720075B0CF /* FitnessGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C963CDF9216613720075B0CF /* FitnessGuruTests.swift */; };
@@ -31,9 +41,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17773D9A21677B10005AE9D9 /* FitnessDetail.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FitnessDetail.xml; sourceTree = "<group>"; };
+		17773D9C21677B47005AE9D9 /* Index.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Index.xml; sourceTree = "<group>"; };
+		177BFC73216B2D2600B230FC /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		17D174DD21672B7000DF0CA5 /* application.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
+		17D174E02167315600DF0CA5 /* Index.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Index.xml; sourceTree = "<group>"; };
+		17D174E22167317400DF0CA5 /* CategoryList.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CategoryList.xml; sourceTree = "<group>"; };
+		17D174E42167330C00DF0CA5 /* Index.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Index.xml; sourceTree = "<group>"; };
+		17D174E6216735C700DF0CA5 /* Category.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Category.js; sourceTree = "<group>"; };
+		17D174E8216740DF00DF0CA5 /* DocumentController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = DocumentController.js; sourceTree = "<group>"; };
+		17D174EA2167414000DF0CA5 /* DocumentLoader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = DocumentLoader.js; sourceTree = "<group>"; };
 		C963CDE82166136E0075B0CF /* FitnessGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C963CDEB2166136E0075B0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C963CDED2166136E0075B0CF /* application.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
 		C963CDEE216613720075B0CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C963CDF0216613720075B0CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C963CDF5216613720075B0CF /* FitnessGuruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessGuruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +88,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17773D9921677AE5005AE9D9 /* FitnessDetail */ = {
+			isa = PBXGroup;
+			children = (
+				17773D9A21677B10005AE9D9 /* FitnessDetail.xml */,
+				17773D9C21677B47005AE9D9 /* Index.xml */,
+			);
+			path = FitnessDetail;
+			sourceTree = "<group>";
+		};
+		17D174D921672B0800DF0CA5 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				17D174DC21672B4200DF0CA5 /* templates */,
+				17D174DB21672B3900DF0CA5 /* resources */,
+				17D174DA21672B3000DF0CA5 /* js */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		17D174DA21672B3000DF0CA5 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				17D174DD21672B7000DF0CA5 /* application.js */,
+				17D174E8216740DF00DF0CA5 /* DocumentController.js */,
+				17D174EA2167414000DF0CA5 /* DocumentLoader.js */,
+				17D174E6216735C700DF0CA5 /* Category.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		17D174DB21672B3900DF0CA5 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				177BFC73216B2D2600B230FC /* images */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		17D174DC21672B4200DF0CA5 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				17773D9921677AE5005AE9D9 /* FitnessDetail */,
+				17D174E02167315600DF0CA5 /* Index.xml */,
+				17D174DF21672D8D00DF0CA5 /* Category */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
+		17D174DF21672D8D00DF0CA5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				17D174E22167317400DF0CA5 /* CategoryList.xml */,
+				17D174E42167330C00DF0CA5 /* Index.xml */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		C963CDDF2166136D0075B0CF = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +168,8 @@
 		C963CDEA2166136E0075B0CF /* FitnessGuru */ = {
 			isa = PBXGroup;
 			children = (
+				17D174D921672B0800DF0CA5 /* Server */,
 				C963CDEB2166136E0075B0CF /* AppDelegate.swift */,
-				C963CDED2166136E0075B0CF /* application.js */,
 				C963CDEE216613720075B0CF /* Assets.xcassets */,
 				C963CDF0216613720075B0CF /* Info.plist */,
 			);
@@ -221,7 +297,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D174E7216735C700DF0CA5 /* Category.js in Resources */,
+				177BFC74216B2D2600B230FC /* images in Resources */,
+				17D174E12167315600DF0CA5 /* Index.xml in Resources */,
+				17D174EB2167414100DF0CA5 /* DocumentLoader.js in Resources */,
+				17D174E32167317400DF0CA5 /* CategoryList.xml in Resources */,
 				C963CDEF216613720075B0CF /* Assets.xcassets in Resources */,
+				17773D9B21677B10005AE9D9 /* FitnessDetail.xml in Resources */,
+				17D174E9216740DF00DF0CA5 /* DocumentController.js in Resources */,
+				17D174E52167330C00DF0CA5 /* Index.xml in Resources */,
+				17773D9D21677B47005AE9D9 /* Index.xml in Resources */,
+				17D174DE21672B7000DF0CA5 /* application.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
