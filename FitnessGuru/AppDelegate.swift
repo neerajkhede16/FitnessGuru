@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  FitnessGuru
+//  EnumData
 //
-//  Created by Neeraj Khede on 04/10/18.
-//  Copyright © 2018 Neeraj Khede. All rights reserved.
+//  Created by Gurunath Allapure on 04/10/18.
+//  Copyright © 2018 Gurunath Allapure. All rights reserved.
 //
 
 import UIKit
@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     var appController: TVApplicationController?
     
     // tvBaseURL points to a server on your local machine. To create a local server for testing purposes, use the following command inside your project folder from the Terminal app: ruby -run -ehttpd . -p9001. See NSAppTransportSecurity for information on using a non-secure server.
-    static let tvBaseURL = "http://127.0.0.1:9001/"
-    static let tvBootURL = "\(AppDelegate.tvBaseURL)js/application.js"
+    static let tvBaseURL = "http://127.0.0.1:8000/"
+    static let tvBootURL = "\(AppDelegate.tvBaseURL)/application.js"
     
     // MARK: Javascript Execution Helper
     
@@ -46,14 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         }
         
         appControllerContext.launchOptions = ["baseURL": AppDelegate.tvBaseURL]
-        for (key, value) in launchOptions ?? [:] {
-            appControllerContext.launchOptions[key.rawValue] = value
+
+        if let launchOptions = launchOptions {
+            for (kind, value) in launchOptions {
+                appControllerContext.launchOptions[kind.rawValue] = value
+            }
         }
-//        if let launchOptions = launchOptions {
-//            for (kind, value) in launchOptions {
-//                appControllerContext.launchOptions[kind.rawValue] = value
-//            }
-//        }
         
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
         
