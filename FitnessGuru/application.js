@@ -2,7 +2,6 @@
 
 //
 //  application.js
-//  EnumData
 //
 //  Created by Gurunath Allapure on 04/10/18.
 //  Copyright © 2018 Gurunath Allapure. All rights reserved.
@@ -167,8 +166,7 @@ var generateShelf = function(data)
 
 function openDetail(event) {
     
-    var loadingIndicator = indicator("Loading details...")
-    navigationDocument.pushDocument(loadingIndicator)
+
     
     
     var target = event.target;
@@ -178,7 +176,7 @@ function openDetail(event) {
     var videoURL = target.getAttribute('videoURL')
     var desc = target.getAttribute('desc')
     var index = target.getAttribute('catID')
-
+    
     
     var assets = myJSON.data[index-1].SubCategory
     var xmlShelf = generateShelf(assets);
@@ -209,10 +207,17 @@ function openDetail(event) {
     <stack>
     <title>${title}</title>
     <description handlesOverflow="true">${desc}</description>
+    <row>
+    <buttonLockup>
+    </buttonLockup>
+    </row>
     </stack>
     <heroImg src="${image}" width="400" height="600" />
         </banner>
         <shelf class="9ColumnGrid">
+    <header>
+    <title>Video Tutorials</title>
+    </header>
         <section>
         ${xmlShelf}
         </section>
