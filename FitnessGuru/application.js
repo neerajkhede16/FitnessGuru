@@ -33,13 +33,16 @@
 
 
 var myJSON = {}
+
 const API = "https://s3.ap-south-1.amazonaws.com/fitnessguru1/fitness.json";
 App.onLaunch = function(options) {
+    console.log("OnLaunch")
     fetchFitnessData()
 }
 
+
 function fetchFitnessData() {
-    var loadingIndicator = indicator("Loading details...")
+    var loadingIndicator = indicator("Loading Categories...")
     navigationDocument.pushDocument(loadingIndicator)
     
     apiRequest(function (data) {
@@ -50,6 +53,7 @@ function fetchFitnessData() {
 
 }
 
+//######################################## LoadingTemplate ########################################
 
 var indicator = function(title) {
     
@@ -66,6 +70,8 @@ var indicator = function(title) {
     var indicatorDoc = parser.parseFromString(loadingTemplate, "application/xml");
     return indicatorDoc
 }
+
+//######################################## API Call ########################################
 
 function apiRequest(callback) {
     
@@ -87,8 +93,9 @@ function apiRequest(callback) {
 }
 
 
+//######################################## CompilationTemplate ########################################
 
-var generateItems = function(dataAssets)
+var generateItemsForCompilationTemplate = function(dataAssets)
 {
     
     var items = "";
@@ -107,14 +114,12 @@ var generateItems = function(dataAssets)
     
     return items;
 }
-/**
- * This convenience funnction returns an alert template, which can be used to present errors to the user.
- */
+
 var createCompilation = function() {
 
 
     var assets = myJSON.data
-    var xmlShelf = generateItems(assets);
+    var xmlShelf = generateItemsForCompilationTemplate(assets);
     
     var compilationString = `<?xml version="1.0" encoding="UTF-8" ?>
     <document>
@@ -145,13 +150,14 @@ var createCompilation = function() {
 
     var parser = new DOMParser();
     var compileDoc = parser.parseFromString(compilationString, "application/xml");
-    compileDoc.addEventListener("select", this.openDetail.bind(this), false);
+    compileDoc.addEventListener("select", this.pushProductTemplate.bind(this), false);
     return compileDoc
 }
 
 
+//######################################## ProductTemplate ########################################
 
-var generateShelf = function(data)
+var generateShelfForProductTemplate = function(data, index)
 {
     
     var items = "";
@@ -159,15 +165,12 @@ var generateShelf = function(data)
     for (var i=0;i<data.length;i++)
     {
         var shelf = data[i];
-        items += '<lockup action="LockupTapped" videoURL="'+shelf.VideoURL+'"><img src="' + shelf.Thumbnail + '" width="182" height="274" /><title>' + shelf.Title + '</title></lockup>';
+        items += '<lockup action="LockupTapped" videoURL="'+shelf.VideoURL+'" CategoryID ="'+ index +'" description="'+shelf.Description+'"><img src="' + shelf.Thumbnail + '" width="182" height="274" /><title>' + shelf.Title + '</title></lockup>';
     }
     return items;
 }
 
-function openDetail(event) {
-    
-
-    
+function pushProductTemplate(event) {
     
     var target = event.target;
     
@@ -175,11 +178,11 @@ function openDetail(event) {
     var image = target.getAttribute('imageUrl')
     var videoURL = target.getAttribute('videoURL')
     var desc = target.getAttribute('desc')
+    
     var index = target.getAttribute('catID')
     
-    
     var assets = myJSON.data[index-1].SubCategory
-    var xmlShelf = generateShelf(assets);
+    var xmlShelf = generateShelfForProductTemplate(assets, index);
     
    //We get the Title, Description, thumbnail, VideoURL pass this data to banner and using Catid retrive the subCategory's and inject them to lockup
     var productString = `<?xml version="1.0" encoding="UTF-8" ?>
@@ -218,41 +221,91 @@ function openDetail(event) {
     <header>
     <title>Video Tutorials</title>
     </header>
-        <section>
-        ${xmlShelf}
-        </section>
-        </shelf>
-        </productTemplate>
-        </document>`
+    <section>
+    ${xmlShelf}
+    </section>
+    </shelf>
+    </productTemplate>
+    </document>`
         
     var parser = new DOMParser();
     var domElement = parser.parseFromString(productString, "application/xml");
-    domElement.addEventListener("select", this.getDocument.bind(this), false);
+    domElement.addEventListener("select", this.productShelfPressed.bind(this), false);
     navigationDocument.pushDocument(domElement);
 }
 
-function getDocument(ev) {
+function productShelfPressed(event) {
     
-    var target = ev.target;
+    var target = event.target;
     var action = target.getAttribute('action')
-    var vURL = target.getAttribute('videoURL')
+    var CatID = target.getAttribute('CategoryID')
+    
+    if (action === 'LockupTapped') {
+        pushShowCaseTemplate(CatID)
+    }
 
-    if (action === 'PlayButtonTapped') {
-        launchPlayer(vURL)
-    }
-    else if (action === 'LockupTapped') {
-        launchPlayer(vURL)
-    }
-    else {
-    }
 }
 
+//######################################## showcaseTemplate ########################################
+var generateShelfForShowCaseTemplate = function(catID) {
+    
+ 
+    var assets = myJSON.data[catID-1].SubCategory
+    
+    var shelfXML = "";
+    
+    for (var i=0;i<assets.length;i++) {
+        
+        var asset = assets[i];
+        
+        shelfXML = shelfXML + '<lockup asset="' + asset.subCatId + '" videoURL="'+ asset.VideoURL +'">'
+        + '<img src="' + asset.Thumbnail +'" width="824" height="466" />'
+        + ' <title>'+ asset.Title +'</title>'
+        + '<description>'+ asset.Description +'</description>'
+        + '</lockup>';
+        
+    }
+    return shelfXML;
+}
+function pushShowCaseTemplate(catID) {
+    
 
-function launchPlayer(url) {
+    var xmlShelf;
+    
+    xmlShelf = generateShelfForShowCaseTemplate(catID);
+    
+    var XMLString = `<?xml version="1.0" encoding="UTF-8" ?>
+    <document>
+    <showcaseTemplate theme = "dark">
+    <background>
+    <img src="https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/bg_dark.jpg"/>
+    </background>
+    <banner>
+    <title>Video's</title>
+    </banner>
+    <carousel>
+    <section>
+    ${xmlShelf}
+    </section>
+    </carousel>
+    </showcaseTemplate>
+    </document>`
+    
+    var parser = new DOMParser();
+    var domElement = parser.parseFromString(XMLString, "application/xml");
+    domElement.addEventListener("select", this.launchPlayer.bind(this), false);
+    navigationDocument.pushDocument(domElement);
+}
+//######################################## Video Player ########################################
 
+function launchPlayer(event) {
+
+    var target = event.target;
+    var URL = target.getAttribute('videoURL')
+    
     var player = new Player();
     var playlist = new Playlist();
-    var mediaItem = new MediaItem("video", url);
+    var mediaItem = new MediaItem("video", URL);
     player.playlist = playlist;
     player.playlist.push(mediaItem);
     player.present();
