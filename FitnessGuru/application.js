@@ -32,24 +32,139 @@
 
 
 
-var myJSON = {}
+var myJSON = {
+    "productInfo": {
+        "Name": "Fitness Guru",
+        "Description": "Physical activity or exercise can improve your health and reduce the risk of developing several diseases like type 2 diabetes, cancer and cardiovascular disease. Physical activity and exercise can have immediate and long-term health benefits. Most importantly, regular activity can improve your quality of life. A minimum of 30 minutes a day can allow you to enjoy these benefits..",
+        "Thumbanail": "https://www.verywellfit.com/thmb/BebPKxIRNfz-QYECQfu9CaW2DSU=/1920x1080/filters:fill(FFDB5D,1)/Illo_Exercise-5a626d274e4f7d00373dead6.png"
+    },
+    "data": [{
+             "Catid": 1,
+             "CatName": "Endurance",
+             "CatDescription": "Endurance, or aerobic, activities increase your breathing and heart rate. They keep your heart, lungs, and circulatory system healthy and improve your overall fitness. Building your endurance makes it easier to carry out many of your everyday activities.",
+             "CatThumbnail": "https://www.verywellfit.com/thmb/BebPKxIRNfz-QYECQfu9CaW2DSU=/1920x1080/filters:fill(FFDB5D,1)/Illo_Exercise-5a626d274e4f7d00373dead6.png",
+             "CatVideosCount": 10,
+             "VideoURL": "http://trailers.apple.com/movies/focus_features/9/9-clip_480p.mov",
+             "SubCategory": [{
+                             "Thumbnail": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/plank.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/How+to+Plank.mp4",
+                             "Title": "Plank",
+                             "Description" : "The basic plank is simple: Assume a modified push-up position with your elbows bent 90 degrees and both forearms resting on the floor. Position your elbows directly underneath your shoulders and look straight toward the floor. Your body should form a perfectly straight line from the crown of your head to your heels.",
+                             "subCatId" : 1
+                             },
+                             {
+                             "Thumbnail": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/squat.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/squat.mp4",
+                             "Title": "Squat",
+                                "Description" : "Squats predominately work your butt (glutes) and thighs (hamstrings and quadriceps) but abs, obliques, lower back, calves, and the ankle complex all play supportive roles.",
+                             "subCatId" : 2
+                             },
+                             {
+                             "Thumbnail": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/push_up.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/push_up.mp4",
+                             "Title": "Push up",
+                                "Description" : "Pushups are a basic exercise used in civilian athletic training or physical education and, especially, in military physical training and will develop the pectoral muscles and triceps, with ancillary benefits to the deltoids, serratus anterior, coracobrachialis and the midsection as a whole.",
+                             "subCatId" : 3
+                             },
+                             {
+                             "Thumbnail": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/walking_lunges.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/endurance/walking_lunges.mp4",
+                             "Title": "Walk Lunges",
+                                "Description" : "A lunge can refer to any position of the human body where one leg is positioned forward with knee bent and foot flat on the ground while the other leg is positioned behind. It is used by athletes in cross-training for sports, by weight-trainers as a fitness exercise, and by yogis as part of an asana regimen",
+                             "subCatId" : 4
+                             }
+                             ]
+             },
+             {
+             "Catid": 2,
+             "CatName": "Strength",
+             "CatDescription": "Strength exercises make your muscles stronger. They may help you stay independent and carry out everyday activities, such as climbing stairs and carrying groceries.",
+             "CatThumbnail": "",
+             "CatVideosCount": 12,
+             "SubCategory": [{
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_4.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Strength - 1"
+                             },
+                             {
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_5.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Strength - 2"
+                             },
+                             {
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_1.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Strength - 3"
+                             },
+                             {
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_8.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Strength - 4"
+                             }
+                             ]
+             },
+             {
+             "Catid": 3,
+             "CatName": "Balance",
+             "CatDescription": "Balance exercises help prevent falls, a common problem in older adults. Many lower-body strength exercises will also improve your balance",
+             "CatThumbnail": "http://img.png",
+             "CatVideosCount": 17,
+             "SubCategory": [{
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_6.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Balance - 1"
+                             },
+                             {
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_8.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Balance - 2"
+                             },
+                             {
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_10.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/1507940118923-hysdc8.mp4",
+                             "Title": "Balance - 3"
+                             }
+                             ]
+             },
+             {
+             "Catid": 4,
+             "CatName": "Flexibility",
+             "CatDescription": "Flexibility exercises stretch your muscles and can help your body stay limber. Being flexible gives you more freedom of movement for other exercises as well as for your everyday activities, including driving and getting dressed",
+             "CatThumbnail": "http://img.png",
+             "CatVideosCount": 15,
+             "SubCategory": [{
+                             "Thumbnail": "http://127.0.0.1:9001/resources/images/general/square_l_7.jpg",
+                             "VideoURL": "https://s3.ap-south-1.amazonaws.com/fitnessguru1/You+can+do+it+at+home!.mp4",
+                             "Title": "Flexibility - 1",
+                             "Description" : "A lunge can refer to any position of the human body where one leg is positioned forward with knee bent and foot flat on the ground while the other leg is positioned behind. It is used by athletes in cross-training for sports, by weight-trainers as a fitness exercise, and by yogis as part of an asana regimen"
+
+                             }
+                             ]
+             }
+             ]
+    
+}
+
 const API = "https://s3.ap-south-1.amazonaws.com/fitnessguru1/fitness.json";
 App.onLaunch = function(options) {
+    console.log("OnLaunch")
     fetchFitnessData()
 }
 
+
 function fetchFitnessData() {
-    var loadingIndicator = indicator("Loading details...")
+    var loadingIndicator = indicator("Loading Categories...")
     navigationDocument.pushDocument(loadingIndicator)
     
     apiRequest(function (data) {
-               myJSON = data
+//               myJSON = data
                var compilation = createCompilation();
                navigationDocument.replaceDocument(compilation, loadingIndicator);
                });
 
 }
 
+//######################################## LoadingTemplate ########################################
 
 var indicator = function(title) {
     
@@ -66,6 +181,8 @@ var indicator = function(title) {
     var indicatorDoc = parser.parseFromString(loadingTemplate, "application/xml");
     return indicatorDoc
 }
+
+//######################################## API Call ########################################
 
 function apiRequest(callback) {
     
@@ -87,8 +204,9 @@ function apiRequest(callback) {
 }
 
 
+//######################################## CompilationTemplate ########################################
 
-var generateItems = function(dataAssets)
+var generateItemsForCompilationTemplate = function(dataAssets)
 {
     
     var items = "";
@@ -107,14 +225,12 @@ var generateItems = function(dataAssets)
     
     return items;
 }
-/**
- * This convenience funnction returns an alert template, which can be used to present errors to the user.
- */
+
 var createCompilation = function() {
 
 
     var assets = myJSON.data
-    var xmlShelf = generateItems(assets);
+    var xmlShelf = generateItemsForCompilationTemplate(assets);
     
     var compilationString = `<?xml version="1.0" encoding="UTF-8" ?>
     <document>
@@ -145,13 +261,14 @@ var createCompilation = function() {
 
     var parser = new DOMParser();
     var compileDoc = parser.parseFromString(compilationString, "application/xml");
-    compileDoc.addEventListener("select", this.openDetail.bind(this), false);
+    compileDoc.addEventListener("select", this.pushProductTemplate.bind(this), false);
     return compileDoc
 }
 
 
+//######################################## ProductTemplate ########################################
 
-var generateShelf = function(data)
+var generateShelfForProductTemplate = function(data, index)
 {
     
     var items = "";
@@ -159,15 +276,12 @@ var generateShelf = function(data)
     for (var i=0;i<data.length;i++)
     {
         var shelf = data[i];
-        items += '<lockup action="LockupTapped" videoURL="'+shelf.VideoURL+'"><img src="' + shelf.Thumbnail + '" width="182" height="274" /><title>' + shelf.Title + '</title></lockup>';
+        items += '<lockup action="LockupTapped" videoURL="'+shelf.VideoURL+'" CategoryID ="'+ index +'" description="'+shelf.Description+'"><img src="' + shelf.Thumbnail + '" width="182" height="274" /><title>' + shelf.Title + '</title></lockup>';
     }
     return items;
 }
 
-function openDetail(event) {
-    
-
-    
+function pushProductTemplate(event) {
     
     var target = event.target;
     
@@ -175,11 +289,11 @@ function openDetail(event) {
     var image = target.getAttribute('imageUrl')
     var videoURL = target.getAttribute('videoURL')
     var desc = target.getAttribute('desc')
+    
     var index = target.getAttribute('catID')
     
-    
     var assets = myJSON.data[index-1].SubCategory
-    var xmlShelf = generateShelf(assets);
+    var xmlShelf = generateShelfForProductTemplate(assets, index);
     
    //We get the Title, Description, thumbnail, VideoURL pass this data to banner and using Catid retrive the subCategory's and inject them to lockup
     var productString = `<?xml version="1.0" encoding="UTF-8" ?>
@@ -218,41 +332,91 @@ function openDetail(event) {
     <header>
     <title>Video Tutorials</title>
     </header>
-        <section>
-        ${xmlShelf}
-        </section>
-        </shelf>
-        </productTemplate>
-        </document>`
+    <section>
+    ${xmlShelf}
+    </section>
+    </shelf>
+    </productTemplate>
+    </document>`
         
     var parser = new DOMParser();
     var domElement = parser.parseFromString(productString, "application/xml");
-    domElement.addEventListener("select", this.getDocument.bind(this), false);
+    domElement.addEventListener("select", this.productShelfPressed.bind(this), false);
     navigationDocument.pushDocument(domElement);
 }
 
-function getDocument(ev) {
+function productShelfPressed(event) {
     
-    var target = ev.target;
+    var target = event.target;
     var action = target.getAttribute('action')
-    var vURL = target.getAttribute('videoURL')
+    var CatID = target.getAttribute('CategoryID')
+    
+    if (action === 'LockupTapped') {
+        pushShowCaseTemplate(CatID)
+    }
 
-    if (action === 'PlayButtonTapped') {
-        launchPlayer(vURL)
-    }
-    else if (action === 'LockupTapped') {
-        launchPlayer(vURL)
-    }
-    else {
-    }
 }
 
+//######################################## showcaseTemplate ########################################
+var generateShelfForShowCaseTemplate = function(catID) {
+    
+ 
+    var assets = myJSON.data[catID-1].SubCategory
+    
+    var shelfXML = "";
+    
+    for (var i=0;i<assets.length;i++) {
+        
+        var asset = assets[i];
+        
+        shelfXML = shelfXML + '<lockup asset="' + asset.subCatId + '" videoURL="'+ asset.VideoURL +'">'
+        + '<img src="' + asset.Thumbnail +'" width="824" height="466" />'
+        + ' <title>'+ asset.Title +'</title>'
+        + '<description>'+ asset.Description +'</description>'
+        + '</lockup>';
+        
+    }
+    return shelfXML;
+}
+function pushShowCaseTemplate(catID) {
+    
 
-function launchPlayer(url) {
+    var xmlShelf;
+    
+    xmlShelf = generateShelfForShowCaseTemplate(catID);
+    
+    var XMLString = `<?xml version="1.0" encoding="UTF-8" ?>
+    <document>
+    <showcaseTemplate theme = "dark">
+    <background>
+    <img src="http://127.0.0.1:9001/resources/images/general/bg_dark.jpg"/>
+    </background>
+    <banner>
+    <title>Video's</title>
+    </banner>
+    <carousel>
+    <section>
+    ${xmlShelf}
+    </section>
+    </carousel>
+    </showcaseTemplate>
+    </document>`
+    
+    var parser = new DOMParser();
+    var domElement = parser.parseFromString(XMLString, "application/xml");
+    domElement.addEventListener("select", this.launchPlayer.bind(this), false);
+    navigationDocument.pushDocument(domElement);
+}
+//######################################## Video Player ########################################
 
+function launchPlayer(event) {
+
+    var target = event.target;
+    var URL = target.getAttribute('videoURL')
+    
     var player = new Player();
     var playlist = new Playlist();
-    var mediaItem = new MediaItem("video", url);
+    var mediaItem = new MediaItem("video", URL);
     player.playlist = playlist;
     player.playlist.push(mediaItem);
     player.present();

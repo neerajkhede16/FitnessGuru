@@ -19,6 +19,7 @@
 		174F5D842170802D00C8768E /* square_l_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 174F5D792170802D00C8768E /* square_l_9.jpg */; };
 		174F5D852170802D00C8768E /* square_l_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 174F5D7A2170802D00C8768E /* square_l_8.jpg */; };
 		174F5D872170803900C8768E /* application.js in Resources */ = {isa = PBXBuildFile; fileRef = 174F5D862170803900C8768E /* application.js */; };
+		C75C13C4217753F60081B6CD /* bg_dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C75C13C3217753F60081B6CD /* bg_dark.jpg */; };
 		C963CDEC2166136E0075B0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C963CDEB2166136E0075B0CF /* AppDelegate.swift */; };
 		C963CDEF216613720075B0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C963CDEE216613720075B0CF /* Assets.xcassets */; };
 		C963CDFA216613720075B0CF /* FitnessGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C963CDF9216613720075B0CF /* FitnessGuruTests.swift */; };
@@ -55,6 +56,7 @@
 		174F5D792170802D00C8768E /* square_l_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = square_l_9.jpg; sourceTree = "<group>"; };
 		174F5D7A2170802D00C8768E /* square_l_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = square_l_8.jpg; sourceTree = "<group>"; };
 		174F5D862170803900C8768E /* application.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
+		C75C13C3217753F60081B6CD /* bg_dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_dark.jpg; sourceTree = "<group>"; };
 		C963CDE82166136E0075B0CF /* FitnessGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C963CDEB2166136E0075B0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C963CDEE216613720075B0CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		174F5D6F2170801300C8768E /* general */ = {
 			isa = PBXGroup;
 			children = (
+				C75C13C3217753F60081B6CD /* bg_dark.jpg */,
 				174F5D712170802D00C8768E /* product.jpg */,
 				174F5D722170802D00C8768E /* square_l_1.jpg */,
 				174F5D732170802D00C8768E /* square_l_2.jpg */,
@@ -283,6 +286,7 @@
 				174F5D872170803900C8768E /* application.js in Resources */,
 				174F5D842170802D00C8768E /* square_l_9.jpg in Resources */,
 				174F5D832170802D00C8768E /* square_l_4.jpg in Resources */,
+				C75C13C4217753F60081B6CD /* bg_dark.jpg in Resources */,
 				174F5D7E2170802D00C8768E /* square_l_2.jpg in Resources */,
 				174F5D7B2170802D00C8768E /* square_l_10.jpg in Resources */,
 				174F5D822170802D00C8768E /* square_l_3.jpg in Resources */,
