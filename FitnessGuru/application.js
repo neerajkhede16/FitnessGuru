@@ -159,7 +159,7 @@ var createCompilation = function() {
 
 var generateShelfForProductTemplate = function(data, index)
 {
-    
+    console.log("generateShelfForProductTemplate")
     var items = "";
   
     for (var i=0;i<data.length;i++)
@@ -172,6 +172,7 @@ var generateShelfForProductTemplate = function(data, index)
 
 function pushProductTemplate(event) {
     
+    
     var target = event.target;
     
     var title = target.getAttribute('Title')
@@ -183,6 +184,7 @@ function pushProductTemplate(event) {
     
     var assets = myJSON.data[index-1].SubCategory
     var xmlShelf = generateShelfForProductTemplate(assets, index);
+    console.log("pushProductTemplate")
     
    //We get the Title, Description, thumbnail, VideoURL pass this data to banner and using Catid retrive the subCategory's and inject them to lockup
     var productString = `<?xml version="1.0" encoding="UTF-8" ?>
@@ -211,7 +213,9 @@ function pushProductTemplate(event) {
     <title>${title}</title>
     <description handlesOverflow="true">${desc}</description>
     <row>
-    <buttonLockup>
+    <buttonLockup action="PlayTapped" cateID = "${index}">
+    <badge src="resource://button-play" />
+    <title>Preview</title>
     </buttonLockup>
     </row>
     </stack>
@@ -238,12 +242,13 @@ function productShelfPressed(event) {
     
     var target = event.target;
     var action = target.getAttribute('action')
-    var CatID = target.getAttribute('CategoryID')
-    
     if (action === 'LockupTapped') {
-        pushShowCaseTemplate(CatID)
+        launchPlayer(event)
     }
-
+    else if (action === 'PlayTapped') {
+        var Id = target.getAttribute('cateID')
+        pushShowCaseTemplate(Id)
+    }
 }
 
 //######################################## showcaseTemplate ########################################
