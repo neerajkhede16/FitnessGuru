@@ -55,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
         
+        // test changes
+        
         return true
     }
     
